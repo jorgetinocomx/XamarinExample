@@ -7,11 +7,14 @@ using Xamarin.Forms;
 
 namespace XExample
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : MasterDetailPage
     {
         public MainPage()
         {
             InitializeComponent();
+            this.Master = new Views._Master();
+            this.Detail = new NavigationPage(new Views._Detail());
+            App.MasterD = this;
         }
     }
 }
