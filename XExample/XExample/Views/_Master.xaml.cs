@@ -18,7 +18,7 @@ namespace XExample.Views
         }
 
         /// <summary>
-        /// Trigerred when database  button menu is pressed in the master detail page. 
+        /// Trigerred when database  button (menu item) is pressed in the master detail page. 
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments</param>
@@ -27,6 +27,17 @@ namespace XExample.Views
             App.MasterD.IsPresented = false;
             await App.MasterD.Detail.Navigation.PushAsync(new Views.Database());
 
+        }
+
+        /// <summary>
+        /// Trigerred when webservice  button(menu item) is pressed in the master detail page. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void btnWS_Clicked(object sender, EventArgs e)
+        {
+            App.MasterD.IsPresented = false;
+            await App.MasterD.Detail.Navigation.PushAsync(new Views.WebServices());
         }
     }
 }
