@@ -19,6 +19,7 @@ namespace XExample
         protected override void OnStart()
         {
             // Handle when your app starts
+//modificación local
         }
 
         protected override void OnSleep()
