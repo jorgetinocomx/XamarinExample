@@ -25,7 +25,7 @@ namespace XExample.Views
         private async void btnDBs_Clicked(object sender, EventArgs e)
         {
             App.MasterD.IsPresented = false;
-            await App.MasterD.Detail.Navigation.PushAsync(new Views.Database());
+            await App.MasterD.Detail.Navigation.PushAsync(new Views.Employees.All());
 
         }
 

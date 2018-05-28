@@ -4,17 +4,19 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using XExample.DB;
 
 namespace XExample
 {
     public partial class App : Application
     {
         public static MasterDetailPage MasterD { get; set; }
+        public static EmployeeREPO EmployeeRepo;
+
         public App()
         {
             InitializeComponent();
-
-            MainPage = new XExample.MainPage();
+            MainPage = new XExample.MainPage(); 
         }
 
         protected override void OnStart()
