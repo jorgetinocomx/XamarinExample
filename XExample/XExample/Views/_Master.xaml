@@ -6,5 +6,6 @@
     <StackLayout Orientation="Vertical" Padding="12" >
         <Button Text="Databases" x:Name="btnDBs" Clicked="btnDBs_Clicked"></Button>
         <Button Text="Web Services" x:Name="btnWS" Clicked="btnWS_Clicked"></Button>
+        <Button Text="QR Reader" x:Name="btnQR" Clicked="btnQR_Clicked"></Button>
     </StackLayout>
 </ContentPage>

@@ -39,5 +39,16 @@ namespace XExample.Views
             App.MasterD.IsPresented = false;
             await App.MasterD.Detail.Navigation.PushAsync(new Views.WebServices());
         }
+
+        /// <summary>
+        /// Call the <see cref="Views.QRReader"/> page when clicking on QR button.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void btnQR_Clicked(object sender, EventArgs e)
+        {
+            App.MasterD.IsPresented = false;
+            await App.MasterD.Detail.Navigation.PushAsync(new Views.QRReader());
+        }
     }
 }
