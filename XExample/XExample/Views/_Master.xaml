@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XExample.Views._Master"
+             Title="Master Page Menú">
+    <StackLayout Orientation="Vertical" Padding="12" >
+        <Button Text="Databases" x:Name="btnDBs" Clicked="btnDBs_Clicked"></Button>
+        <Button Text="Web Services" x:Name="btnWS" Clicked="btnWS_Clicked"></Button>
+        <Button Text="QR Reader" x:Name="btnQR" Clicked="btnQR_Clicked"></Button>
+    </StackLayout>
+</ContentPage>

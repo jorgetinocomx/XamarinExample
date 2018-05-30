@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XExample.Views.WebServices"
+             Title="Web Service Example">
+    <ListView ItemsSource="{Binding .}">
+        <ListView.Header>
+            <StackLayout Padding="10" 
+                   Orientation="Horizontal"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="#dadada">
+                <Label x:Name="HeaderLabel" Text="Welcome text. This will be changed by the code"
+               HorizontalTextAlignment="Center"
+               HorizontalOptions="FillAndExpand"
+               TextColor="Black"
+               FontAttributes="Bold"/>
+            </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+               <!-- Another way to bind the text is using TextCell instead of a  Grid.-->
+                <!--<TextCell Text="{Binding FirstName}"
+                  Detail="{Binding LastName}"/>-->
+
+                <ViewCell>
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="8*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="{Binding Avatar}" />
+                        <StackLayout Grid.Column="1" >
+                            <!-- YOUR LABELS HERE -->
+                            <Label Text="{Binding FirstName}" TextColor="#5b5c60" Font="Bold,14" HorizontalOptions="StartAndExpand"/>
+                            <Label Text="{Binding LastName}" TextColor="#bbbec9"/>
+                        </StackLayout>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.Footer>
+            <StackLayout Padding="10"
+                   Orientation="Horizontal"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="#dadada">
+                <Label x:Name="FooterLabel" Text="..." 
+               HorizontalTextAlignment="Center" 
+               HorizontalOptions="FillAndExpand" 
+               TextColor="Black"
+               FontAttributes="Bold"/>
+            </StackLayout>
+        </ListView.Footer>
+    </ListView>
+</ContentPage>
