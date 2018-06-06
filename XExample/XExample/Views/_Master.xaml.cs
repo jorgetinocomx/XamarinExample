@@ -50,5 +50,17 @@ namespace XExample.Views
             App.MasterD.IsPresented = false;
             await App.MasterD.Detail.Navigation.PushAsync(new Views.QRReader());
         }
+        
+        /// <summary>
+        /// Call the SOAP web service example view.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void btnSOAP_Clicked(object sender, EventArgs e)
+        {
+            App.MasterD.IsPresented = false;
+            await App.MasterD.Detail.Navigation.PushAsync(new Views.SOAPServicexaml());
+
+        }
     }
 }

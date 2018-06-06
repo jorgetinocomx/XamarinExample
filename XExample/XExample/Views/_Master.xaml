@@ -5,7 +5,8 @@
              Title="Master Page Menú">
     <StackLayout Orientation="Vertical" Padding="12" >
         <Button Text="Databases" x:Name="btnDBs" Clicked="btnDBs_Clicked"></Button>
-        <Button Text="Web Services" x:Name="btnWS" Clicked="btnWS_Clicked"></Button>
         <Button Text="QR Reader" x:Name="btnQR" Clicked="btnQR_Clicked"></Button>
+        <Button Text="SOAP Service" x:Name="btnSOAP" Clicked="btnSOAP_Clicked"></Button>
+        <Button Text="REST Service" x:Name="btnWS" Clicked="btnWS_Clicked"></Button>
     </StackLayout>
 </ContentPage>

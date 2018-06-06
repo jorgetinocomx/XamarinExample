@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XExample.Views.SOAPServicexaml">
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10">
+            <Label Text="Description: Using a SOAP services for adding two numbers" FontSize="Medium"/>
+            <Entry x:Name="FirstNumber" Keyboard="Numeric" Placeholder="Insert a first number"/>
+            <Entry x:Name="SecondNumber" Keyboard="Numeric" Placeholder="Insert a second number"/>
+            <ActivityIndicator x:Name="WaitService"/>
+            <Button x:Name="AddButton" Text="Add numbers" TextColor="White" BackgroundColor="BlueViolet" Clicked="AddButton_Clicked"/>
+            <Label Text="WebService used: http://www.dneonline.com/calculator.asmx" VerticalOptions="End"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

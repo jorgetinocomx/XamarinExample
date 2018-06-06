@@ -12,7 +12,7 @@
     <AssemblyName>XExample</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -38,6 +38,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\CalculatorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="DB\Database.cs" />
     <Compile Include="DB\EmployeeREPO.cs" />
     <Compile Include="DB\ISQLite.cs" />
@@ -55,6 +60,9 @@
     <Compile Include="Views\QRReader.xaml.cs">
       <DependentUpon>QRReader.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\SOAPServicexaml.xaml.cs">
+      <DependentUpon>SOAPServicexaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\WebServices.xaml.cs">
       <DependentUpon>WebServices.xaml</DependentUpon>
     </Compile>
@@ -67,6 +75,7 @@
     <Compile Include="WebServices\Entities\User.cs" />
     <Compile Include="WebServices\IClient.cs" />
     <Compile Include="WebServices\REST\Client.cs" />
+    <Compile Include="WebServices\SOAP\Calculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -126,7 +135,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\CalculatorService\calculator.wsdl" />
     <None Include="packages.config" />
+    <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\WebServices.xaml">
@@ -160,6 +171,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\QRReader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CalculatorService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CalculatorService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CalculatorService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CalculatorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SOAPServicexaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
